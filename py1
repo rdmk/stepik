@@ -1,0 +1,23 @@
+h = 'Q13C12X17'
+let, num, word = '', '', ''
+i, n = 0, 0
+while i + 1 <= len(h):
+    if h[i].isalpha():
+        let = h[i]
+    else:
+        while h[i + n].isdigit():
+            num += h[i + n]
+            if i + n + 1 >= len(h):
+                n += 1
+                break
+            n += 1
+    if num == '':
+        i += 1
+    elif num != '':
+        word += let * int(num)
+        i += n
+        num = ''
+    else:
+        i += n
+    
+print(word)
