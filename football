@@ -1,0 +1,17 @@
+n = int(input())
+i = 0
+d = []
+tablica = {}
+while i < n:
+	d.append(input().split(';'))
+	i += 1
+def tblica(team1, goals1, team2, goals2, matchresult):
+	if goals1 > goals2:
+		matchresult[1] += 1
+		return matchresult
+for k in d:
+	for a in k:
+		if a.isalpha() and a not in tablica:
+			#d[a] = {'win' : 0, 'lose': 0, 'draw': 0, 'gs': 0, 'gc': 0}
+			tablica[a] = {'games' : 0,'win' : 0, 'lose': 0, 'draw': 0, 'points' : 0}
+print(tablica)
